@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: merchant-slabs-coll-d79cbacbd78a4103b70bee3689814092-depl
+  labels:
+    app: merchant-slabs-coll-d79cbacbd78a4103b70bee3689814092
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: merchant-slabs-coll-d79cbacbd78a4103b70bee3689814092
+  template:
+    metadata:
+      labels:
+        app: merchant-slabs-coll-d79cbacbd78a4103b70bee3689814092
+    spec:
+      containers:
+        - name: merchant-slabs-coll-d79cbacbd78a4103b70bee3689814092
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:merchant-slabs-coll-d79cbacbd78a4103b70bee3689814092
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9058

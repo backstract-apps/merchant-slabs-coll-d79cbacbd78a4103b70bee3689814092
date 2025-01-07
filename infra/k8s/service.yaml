@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: merchant-slabs-coll-d79cbacbd78a4103b70bee3689814092-srv
+spec:
+  selector:
+    app: merchant-slabs-coll-d79cbacbd78a4103b70bee3689814092
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9058
+  type: ClusterIP
